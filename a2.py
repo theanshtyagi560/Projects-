@@ -55,16 +55,127 @@
 
 
 
-def re( nums, val) :
-        c=[]
-        a=[]
-        for i in range(len(nums)):
-            if nums[i] != val:
-                # num[]
-                c.append(nums[i])
-                a.append(nums[i])
-        b=list(set(a))
-        b.append(len(c))
-        return b
-a=re([3,2,2,3],3)
-print(a)
+# def re( nums, val) :
+#         c=[]
+#         a=[]
+#         for i in range(len(nums)):
+#             if nums[i] != val:
+#                 # num[]
+#                 c.append(nums[i])
+#                 a.append(nums[i])
+#         b=list(set(a))
+#         b.append(len(c))
+#         return b
+# a=re([3,2,2,3],3)
+# print(a)
+
+# nums = [0,1,0,3,12]
+
+
+# def cal(operations) :
+#         i=0
+#         l=[]
+#         for j in range(len( operations)) :
+#             if operations[j] == "C":
+#                 l.pop(-1)
+#             elif operations[j] == "D":
+#                 l.append(l[-1]*2)
+#             elif operations[j]== "+" :
+#                 a = l[-1]+l[-2]
+#                 l.append(a)
+#             else: 
+#                 l.append(int(operations[j]))
+#             print(l)
+#         for e in l :
+#             i = i+ int(e)
+
+#         return i
+# print(cal(["5","2","C","D","+"])) 
+
+
+# def maxArea( height) :
+#        ma = height[0] 
+#        for i in range(len(height)) :
+#             if ma > height[i] and height[i] != max(height) : 
+#                 ma = height[i]
+#                #  print(ma)
+
+#        print(ma)
+#        print(max(height)) 
+#        return ma*(height.index(max(height))-height.index(ma)) 
+# print(maxArea([1,8,6,2,5,4,8,3,7]))
+ 
+# def m( nums1: list[int], nums2: list[int], k1: int, k2: int) -> int:
+      #   l= []
+      #   b=[]
+      #   for i in range(len(nums1)):
+      #       a = nums1[i]-nums2[i]
+      #       if a <0 :
+      #          a = a-2*(a)
+      #       l.append(a)
+      #   for i in range(k1):
+      #       # while (i<k1) :
+      #           # b = [max(l)-1 for x in l]
+      #           b.append(max(l)-1)
+      #           l.remove(max(l))
+      #           l.append(max(l)-1)
+      # #   l.extend(b)
+      #   print("l", l)
+      #   b.clear()
+      #   for i in range(k2):
+      #       # while (i<k1) :
+      #           # b = [max(l)-1 for x in l]
+      #           b.append(max(l)-1)
+      #           l.remove(max(l))
+      #           l.append(max(l)-1)
+      # #   l.extend(b)
+      #   print("l", l)
+      #   return sum([x**2 for x in l])
+#         l= []    
+#         c = len(nums1)
+#         for i in range(c):
+#             a = nums1[i]-nums2[i]
+#             if a <0 :
+#                a = a-2*(a)
+#             l.append((a))
+#         print("l",l) 
+#         for i in range(k1):
+#                 y=max(l)
+#                 if y == 0 :
+#                     break   
+#                 ind = l.index(y)
+#                 l[ind] = y-1
+#         print("l",l)    
+#         for i in range(k2):
+#                 z=max(l)
+#                 if z==0:
+#                   break
+#                 ind = l.index(z)
+#                 l[ind] = z-1
+#         print("l",l)    
+
+#         return sum([x**2 for x in l])
+# print(m([10,10,10,11,5],[1,0,6,6,1],11,27))
+# print(m([1,4,10,12],[5,8,6,9],10,5))
+
+
+# a = [1,2,3]
+# print((a))
+# print(a[:2])
+
+def f( nums: list[int]) -> list[int]:
+        i=0
+        j=len(nums)
+        n= []
+        p=1
+        def pn(a):
+            prod=1
+            for i in range(1,len(a)+1):
+                prod=i*prod
+            return prod
+        for x in range(j) :
+            
+            p= pn(nums[:x])* pn(nums[x+1:])
+            n.append(p)
+        return n
+print(f([1,2,3,4]))

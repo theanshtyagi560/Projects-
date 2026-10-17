@@ -106,7 +106,7 @@
 #     print(i)
 
 
-def t(prices):
+# def t(prices):
         # max=0
         # low = 0
         # maxi=0
@@ -141,21 +141,49 @@ def t(prices):
             # else:
             #     return 0
             # return maxi
-        profit =0 
-        # low = float('inf')
-        low = prices[0]
-        for i in range(0,len(prices)):
-            if low > prices[i] :
-                low = prices[i]
-            # else :
-            elif profit < prices[i] -low :
-                    profit = prices[i] -low
-                # else :
-                #     continue 
+#         profit =0 
+#         # low = float('inf')
+#         low = prices[0]
+#         for i in range(0,len(prices)):
+#             if low > prices[i] :
+#                 low = prices[i]
+#             # else :
+#             elif profit < prices[i] -low :
+#                     profit = prices[i] -low
+#                 # else :
+#                 #     continue 
             
-        return profit
+#         return profit
 
-print(t([2,1,2,1,0,1,2]))
-# print(t([7,1,5,3,6,4]))
-# prices =
-# [2,1,2,1,0,1,2]
+# print(t([2,1,2,1,0,1,2]))
+# # print(t([7,1,5,3,6,4]))
+# # prices =
+# # [2,1,2,1,0,1,2]
+
+# nums=[2,2,1,1,2,1,2]
+# c=0
+# max=0
+# for i in nums :
+#     # print(str(i).count("1"))    
+#     if nums.count(i) >  len(nums)/2 :
+#        c+=1
+#        print(i)
+#        break
+
+# print(c)
+# if c >  len/2 :
+#     print(i)
+
+
+# total=0
+# c=0
+# for i in nums : 
+#             total+=i
+#             c+=1
+#             if total/c > 2:
+#                 print("False")
+#                 break
+#             print("true")
+# print(total/c)
+
+
