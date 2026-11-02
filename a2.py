@@ -163,19 +163,66 @@
 # print((a))
 # print(a[:2])
 
-def f( nums: list[int]) -> list[int]:
-        i=0
-        j=len(nums)
-        n= []
-        p=1
-        def pn(a):
-            prod=1
-            for i in range(1,len(a)+1):
-                prod=i*prod
-            return prod
-        for x in range(j) :
+# def f( nums: list[int]) -> list[int]:
+#         i=0
+#         j=len(nums)
+#         n= []
+#         p=1
+#         def pn(a):
+#             prod=1
+#             if len(a)==1:
+#                 return a[0]
+#             for i in range(1,len(a)+1):
+#                 prod=i*pn(a-1)  
+
+#             return prod
+#         for x in range(j) :
+#           if x==0:
+#                 p = pn(nums[1:])
+#           else:        
+#             p= pn(nums[:x])* pn(nums[x+1:])
+#           n.append(p)
+#         return n
+# print(f([1,2,3,4]))
+
+
+# def f(nums: list[int]) -> list[int]:
+#     n = []
+#     for x in range(len(nums)):
+#       p = 1
+#       for y in range(len(nums)):
+#         if x == y:
+#           continue
+#         p *= nums[y]
+#       n.append(p)        
+#     return n
+# def f( nums: list[str], k: int) -> str:
+#         a=[]
+#         for i in nums:
+#             a.append(int(i))
             
-            p= pn(nums[:x])* pn(nums[x+1:])
-            n.append(p)
-        return n
-print(f([1,2,3,4]))
+#         print(a)
+#         n2=sorted(a)
+#         a = n2[len(nums)-k]
+#         return str(a)
+        
+# print(f(["3","6","7","10"],4))  # Output: [24, 12, 8, 6]
+
+
+
+
+def rotate(nums: list[int], k: int) -> None:
+    a=[]
+    for i in range(k):
+        a.append(nums[-k])
+        print("a",a)
+        nums.pop(-k)
+        k-=1
+        # print(a)
+        # nums.insert(0,a[0])
+        # a.pop(-1)
+    print(a)
+    # nums= a+nums
+    nums[:0]=a
+    return nums
+print(rotate([1,2,3,4,5,6,7],3))
